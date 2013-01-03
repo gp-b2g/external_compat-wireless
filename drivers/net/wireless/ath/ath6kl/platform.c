@@ -23,7 +23,7 @@
 #define GET_INODE_FROM_FILEP(filp) \
 	((filp)->f_path.dentry->d_inode)
 
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,21))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,1))
 #define ATH6KL_INIT_TIMEOUT	(3 * HZ)
 wait_queue_head_t init_wq;
 static atomic_t init_done = ATOMIC_INIT(0);
@@ -176,7 +176,7 @@ void __exit ath6kl_sdio_exit_platform(void)
 	mdelay(1000);
 
 }
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,21))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,1))
 int ath6kl_wait_for_init_comp(void)
 {
 	int left;

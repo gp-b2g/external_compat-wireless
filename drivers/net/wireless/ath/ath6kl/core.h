@@ -893,7 +893,7 @@ void ath6kl_sdio_init_platform(void);
 void ath6kl_sdio_exit_platform(void);
 void ath6kl_mangle_mac_address(struct ath6kl *ar, u8 locally_administered_bit);
 
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,21))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,1))
 int ath6kl_wait_for_init_comp(void);
 void ath6kl_notify_init_done(void);
 #endif

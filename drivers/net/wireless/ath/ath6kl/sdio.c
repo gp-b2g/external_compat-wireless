@@ -1453,7 +1453,7 @@ static int ath6kl_sdio_probe(struct sdio_func *func,
 		goto err_core_alloc;
 
         }
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,21))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,1))
 	ath6kl_notify_init_done();
 #endif
 	return ret;
@@ -1537,7 +1537,7 @@ static int __init ath6kl_sdio_init(void)
 		return ret;
 	}
 
-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,21))
+#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3,0,1))
 	ret = ath6kl_wait_for_init_comp();
 #endif
 	return ret;
