@@ -5,6 +5,8 @@ else
 	DLKM_DIR := build/dlkm
 endif
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+
 ifeq ($(BOARD_HAS_ATH_WLAN), true)
 
 export BUILD_ATH6KL_VER_32=1
@@ -64,5 +66,7 @@ LOCAL_MODULE_PATH        := $(TARGET_OUT)/lib/modules/ath6kl-3.5
 include $(DLKM_DIR)/AndroidKernelModule.mk
 
 include $(LOCAL_PATH)/drivers/net/wireless/ath/ath6kl-3.5/android_sdio/Android.mk
+
+endif
 
 endif
