@@ -5,7 +5,7 @@ else
 	DLKM_DIR := build/dlkm
 endif
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
+ifeq ($(HOST_OS),linux)
 
 ifeq ($(BOARD_HAS_ATH_WLAN), true)
 
